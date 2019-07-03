@@ -1,6 +1,6 @@
 <template>
-    <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card">
+    <div class="card-deck">
+        <div class="card text-center">
             <div class="card-body">
                 <slot></slot>
             </div>
@@ -17,6 +17,8 @@ export default {
 <style scoped>
     .card {
         width: 18rem;
+        height: 20rem;
     }
+
 </style>
 

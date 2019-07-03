@@ -41,6 +41,7 @@
 
 <script>
 import axios from 'axios'
+import Home from './Home.vue'
 export default {
     data() {
         return {
@@ -62,7 +63,7 @@ export default {
                 this.postData.content = '';
                 if (res.statusText == "OK"){
                     alert("Posted Successfully")
-                    
+                    Home.methods.GetPosts();
                 }
             })
             .catch(error => console.error(error));

@@ -20,19 +20,26 @@ export default {
     },
 
     created() {
-        axios.get("https://rhq-blog.firebaseio.com/posts.json")
-        .then(res => {
-            const data = res.data;
-            const posts = [];
-            for (let key in data){
-                const post = data[key];
-                post.id = key;
-                posts.push(post)
-            }
-            this.posts = posts;
-        })
-        .catch(error => console.error(error))
+        this.GetPosts();
     },
+
+    methods: {
+        GetPosts() {
+            axios.get("https://rhq-blog.firebaseio.com/posts.json")
+            .then(res => {
+                const data = res.data;
+                const posts = [];
+                for (let key in data){
+                    const post = data[key];
+                    post.id = key;
+                    posts.push(post)
+                }
+                this.posts = posts;
+            })
+            .catch(error => console.error(error))
+        }
+    },
+
     components: {
         appHeader: Header,
         appPostGrid: PostGrid,
