@@ -4,7 +4,7 @@
             <h1 class="title">Raven's HQ Blog</h1>
         </div>
         <div class="col-sm-4">
-            <button class="btn btn-primary" id="new-btn">New</button>
+            <button class="btn btn-primary" id="new-btn" v-on:click="NavigateToNewPost">New</button>
         </div>
     </div>
 </template>
@@ -12,7 +12,11 @@
 
 <script>
 export default {
-    
+    methods: {
+        NavigateToNewPost() {
+            this.$router.push({path: '/New'})
+        }
+    }
 }
 </script>
 

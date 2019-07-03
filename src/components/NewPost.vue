@@ -2,6 +2,14 @@
     <div>
         <div>
             <div class="row">
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-secondary" v-on:click="NavigateToHome">Back to Home</button>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div>
+            <div class="row">
                 <div class="col-lg-7">
                     <div class="form-group">
                         <label for="id-title-input">Title</label>
@@ -58,6 +66,10 @@ export default {
                 }
             })
             .catch(error => console.error(error));
+        },
+
+        NavigateToHome() {
+            this.$router.push({path: '/'})
         }
     }
 }
