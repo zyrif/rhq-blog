@@ -1,7 +1,7 @@
 <template>
     <div class="card text-center">
         <div class="card-header">Category</div>
-        <div class="card-body">
+        <div class="card-body overflow-hidden">
             <h5 class="card-title"> {{ post.subject }}</h5>
             <h6 class="card-subtitle mt-2 mb-2 text-muted">Author</h6>
             <p class="card-text text-justified">{{ post.content }}</p>
