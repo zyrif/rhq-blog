@@ -54,6 +54,7 @@ export default {
                 this.postData.content = '';
                 if (res.statusText == "OK"){
                     alert("Posted Successfully")
+                    
                 }
             })
             .catch(error => console.error(error));
