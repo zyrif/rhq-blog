@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <app-post v-for="post in posts" v-bind:key="post.id"> {{ post.content }} </app-post>
+        <app-post v-for="post in posts" v-bind:key="post.id" v-bind:post="post"></app-post>
     </div>
 </template>
 
